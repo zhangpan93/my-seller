@@ -1,6 +1,6 @@
-# sell
+# 外卖webapp
 
-> sell app
+> 一个外卖商面页面的vue.js移动端项目，适配多种dpi的手机屏幕，数据采用本地json文件，路由和数据的访问采用vue的核心插件vue-router和vue-resource
 
 ## Build Setup
 
@@ -14,14 +14,8 @@ npm run dev
 # build for production with minification
 npm run build
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+# build for production and view the bundle analyzer report
+npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
