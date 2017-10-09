@@ -8,6 +8,8 @@
 * 滚动条全部采用better-scroll插件
 * 图标字体采用font-awesome
 
+> 因数据调用的mock数据，暂时无法在线预览
+
 ## Build Setup
 
 ``` bash
