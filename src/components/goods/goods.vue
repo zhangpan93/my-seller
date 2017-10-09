@@ -31,7 +31,7 @@
                     <span class="now">￥{{food.price}}</span><span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
                   </div>
                   <div class="cartcontrol-wrapper">
-                    <!-- <cartcontrol @add="addFood" :food="food"></cartcontrol> -->
+                    <foodselect @add="addFood" :food="food"></foodselect>
                   </div>
                 </div>
                 
@@ -50,12 +50,16 @@
 <script>
   import BScroll from 'better-scroll';
   import shopcart from 'components/shopcart/shopcart';
-  // import cartcontrol from 'components/cartcontrol/cartcontrol';
-  // import food from 'components/food/food';
+  import foodselect from 'components/foodselect/foodselect';
+  // import food from 'components/goods/food';
 
   const ERR_OK = 0;
 
   export default {
+  	components: {
+      shopcart,
+      foodselect
+    },
     props: {
       seller: {
         type: Object
@@ -68,9 +72,6 @@
         scrollY: 0,
         selectedFood: {}
       };
-    },
-    components: {
-      shopcart
     },
     computed: {
       currentIndex () {
@@ -143,10 +144,7 @@
         });
 
         this.foodsScroll.on('scroll', (pos) => {
-          // 判断滑动方向，避免下拉时分类高亮错误（如第一分类商品数量为1时，下拉使得第二分类高亮）
-          if (pos.y <= 0) {
             this.scrollY = Math.abs(Math.round(pos.y));
-          }
         });
       },
       calculateHeight () {
@@ -270,8 +268,8 @@
               text-decoration: line-through
               font-size: 10px
               color: rgb(147, 153, 159)
-          // .cartcontrol-wrapper
-          //   position: absolute
-          //   right: 0
-          //   bottom: 12px
+          .cartcontrol-wrapper
+            position: absolute
+            right: 0
+            bottom: 12px
 </style>
