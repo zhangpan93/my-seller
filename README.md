@@ -8,9 +8,6 @@
 * 构建工具：webpack
 * 前端路由：vue-router
 * 服务端通讯：vue-resource
-* 后端框架：express
-
-> 因数据调用的mock数据，暂时无法在线预览
 
 ## Build Setup
 
