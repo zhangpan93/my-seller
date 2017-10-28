@@ -46,7 +46,7 @@
                   <span>￥{{food.price*food.count}}</span>
                 </div>
                 <div class="cartcontrol-wrapper">
-                  <foodselect @add="addFood" :food="food"></foodselect>
+                  <foodselect @add="addFood" :food="food"></foodselect >
                 </div>
               </li>
             </ul>
